@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     
     var segment: UISegmentedControl!
     var feedView: FeedView?
+    var textView: TextView?
+    
     
     private var segmentYPos: CGFloat = 60
    
@@ -21,12 +23,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .darkGray
         LocationManager.shared.delegate = self
-        FeedManager.shared.configure()
+        FeedManager.shared.delegate = self
         addSegment()
-        
         feedView = FeedView(frame: CGRect(x: 0, y: segment.frame.maxY, width: view.frame.width, height: view.frame.height / 2))
-        feedView?.reloadData(numberOfItems: 10, itemAtIndex: getImageView)
+        feedView!.delegate = self
+        textView = TextView(frame: CGRect(x: 0, y: self.feedView!.frame.maxY, width: self.view.frame.width, height: view.frame.height - feedView!.frame.maxY), textContainer: nil)
+        textView!.configure()
+        textView?.backgroundColor = .darkGray
+        FeedManager.shared.configure() { success in
+            self.feedView?.reloadData(numberOfItems:FeedManager.shared.getMaxIndex() , itemAtIndex: self.getImageView)
+        }
         view.addSubview(feedView!)
+        view.addSubview(textView!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,7 +76,15 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: LocationManagerDelegate {
+extension ViewController: LocationManagerDelegate, FeedViewDelegate, FeedManagerDelegate {
+    func updateImages() {
+        self.feedView?.reloadData(numberOfItems:FeedManager.shared.getMaxIndex() , itemAtIndex: self.getImageView)
+    }
+    
+    func pageDidChange() {
+        textView!.reloadAllText(for: feedView!.currentPage)
+    }
+    
     func updateUI(status: Bool) {
         if status {
             let alert = UIAlertController(title: "Error", message: "You're not from Belarus", preferredStyle: .alert)

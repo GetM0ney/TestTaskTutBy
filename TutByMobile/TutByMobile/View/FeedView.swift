@@ -7,9 +7,11 @@
 
 import UIKit
 
-protocol FileViewDelegate {
-    func pageDidChange(with text: String)
+protocol FeedViewDelegate {
+    func pageDidChange()
 }
+
+
 
 class FeedView: UIView {
     let scrollView: UIScrollView = {
@@ -20,30 +22,31 @@ class FeedView: UIView {
 
         return scrollView
     }()
-
     private var itemAtIndex: ((_ bannerView: FeedView, _ index: Int) -> (UIView))!
     private var numberOfItems: Int = 0 {
         didSet {
             if oldValue != numberOfItems {
-                delegate?.pageDidChange(with: "(\(currentPage + 1)/\(numberOfItems))")
+                delegate?.pageDidChange()
             }
+            
         }
     }
 
     private(set) var currentPage: Int = 0 {
         didSet {
             if oldValue != currentPage {
-                delegate?.pageDidChange(with: "(\(currentPage + 1)/\(numberOfItems))")
+                delegate?.pageDidChange()
             }
         }
     }
 
     private var items: [UIView] = [UIView]()
 
-    var delegate: FileViewDelegate?
+    var delegate: FeedViewDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setUpUI()
     }
 
@@ -55,7 +58,7 @@ class FeedView: UIView {
         scrollView.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height)
         scrollView.delegate = self
         addSubview(scrollView)
-
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: leadingAnchor),
             scrollView.topAnchor.constraint(equalTo: topAnchor),
