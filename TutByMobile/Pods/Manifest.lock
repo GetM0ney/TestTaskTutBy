@@ -1,0 +1,24 @@
+PODS:
+  - FeedKit (9.1.2)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+
+DEPENDENCIES:
+  - FeedKit (~> 9.0)
+  - R.swift
+
+SPEC REPOS:
+  trunk:
+    - FeedKit
+    - R.swift
+    - R.swift.Library
+
+SPEC CHECKSUMS:
+  FeedKit: 71653273ab08e618cd6fd1301ca08fc02dca6a9e
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+
+PODFILE CHECKSUM: 20f73caf77f4dad11af83529a1a140c910b4f3eb
+
+COCOAPODS: 1.9.1
