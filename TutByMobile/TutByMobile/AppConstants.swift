@@ -6,6 +6,7 @@
 //
 import Foundation
 
-struct Constants {
+struct AppConstants {
     static let rssURL = URL(string: "https://news.tut.by/rss/index.rss")!
+    static let appName = "TutByMobile"
 }

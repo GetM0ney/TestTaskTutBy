@@ -11,10 +11,12 @@
 		7887BEA9256557F3009729F7 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEA8256557F3009729F7 /* FeedManager.swift */; };
 		7887BEAD2566F23A009729F7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEAC2566F23A009729F7 /* UIImage.swift */; };
 		7887BEBF25674065009729F7 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEBE25674065009729F7 /* TextView.swift */; };
-		78BB12C2256438210043F863 /* RecentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB12C1256438210043F863 /* RecentDataManager.swift */; };
+		78BB12C2256438210043F863 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB12C1256438210043F863 /* CoreDataManager.swift */; };
 		78BB12C625643D4D0043F863 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB12C525643D4D0043F863 /* FeedModel.swift */; };
 		78BB12C9256447530043F863 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB12C8256447530043F863 /* AppConstants.swift */; };
 		78BB12D7256528C10043F863 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB12D6256528C10043F863 /* FeedView.swift */; };
+		78C6E1602567C70C00365FB9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E15F2567C70C00365FB9 /* Date.swift */; };
+		78C6E1632567C7E300365FB9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E1622567C7E300365FB9 /* String.swift */; };
 		78CB134D25631BCE0053E642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB134C25631BCE0053E642 /* AppDelegate.swift */; };
 		78CB135125631BCE0053E642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB135025631BCE0053E642 /* ViewController.swift */; };
 		78CB135725631BCE0053E642 /* TutByMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78CB135525631BCE0053E642 /* TutByMobile.xcdatamodeld */; };
@@ -30,10 +32,12 @@
 		7887BEA8256557F3009729F7 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		7887BEAC2566F23A009729F7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		7887BEBE25674065009729F7 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		78BB12C1256438210043F863 /* RecentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentDataManager.swift; sourceTree = "<group>"; };
+		78BB12C1256438210043F863 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		78BB12C525643D4D0043F863 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		78BB12C8256447530043F863 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		78BB12D6256528C10043F863 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		78C6E15F2567C70C00365FB9 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		78C6E1622567C7E300365FB9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		78CB134925631BCE0053E642 /* TutByMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutByMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CB134C25631BCE0053E642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78CB135025631BCE0053E642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			children = (
 				7887BEA425654F9B009729F7 /* UISegmentControl.swift */,
 				7887BEAC2566F23A009729F7 /* UIImage.swift */,
+				78C6E15F2567C70C00365FB9 /* Date.swift */,
+				78C6E1622567C7E300365FB9 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -80,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				78CB1366256347A30053E642 /* LocationManager.swift */,
-				78BB12C1256438210043F863 /* RecentDataManager.swift */,
+				78BB12C1256438210043F863 /* CoreDataManager.swift */,
 				7887BEA8256557F3009729F7 /* FeedManager.swift */,
 			);
 			path = Manager;
@@ -280,13 +286,15 @@
 				7887BEAD2566F23A009729F7 /* UIImage.swift in Sources */,
 				7887BEA9256557F3009729F7 /* FeedManager.swift in Sources */,
 				78CB1367256347A30053E642 /* LocationManager.swift in Sources */,
+				78C6E1632567C7E300365FB9 /* String.swift in Sources */,
 				78CB135725631BCE0053E642 /* TutByMobile.xcdatamodeld in Sources */,
 				7887BEA525654F9B009729F7 /* UISegmentControl.swift in Sources */,
 				78BB12C9256447530043F863 /* AppConstants.swift in Sources */,
 				78BB12C625643D4D0043F863 /* FeedModel.swift in Sources */,
 				78CB135125631BCE0053E642 /* ViewController.swift in Sources */,
 				7887BEBF25674065009729F7 /* TextView.swift in Sources */,
-				78BB12C2256438210043F863 /* RecentDataManager.swift in Sources */,
+				78BB12C2256438210043F863 /* CoreDataManager.swift in Sources */,
+				78C6E1602567C70C00365FB9 /* Date.swift in Sources */,
 				78CB134D25631BCE0053E642 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
