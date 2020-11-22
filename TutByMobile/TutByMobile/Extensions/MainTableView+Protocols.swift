@@ -38,14 +38,17 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         return feedView
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell
-        cell?.updateCell()
+        cell?.updateCell(textView: textView)
         return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        feedView.frame.height
+        return view.frame.height / 2
     }
 }

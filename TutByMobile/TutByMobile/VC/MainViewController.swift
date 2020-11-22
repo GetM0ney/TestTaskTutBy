@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     var feedView = FeedView()
     var textView = TextView()
     var refreshBar = UIRefreshControl()
-    var tableView = UITableView()
+    var tableView: UITableView!
     
     private var segmentYPos: CGFloat = 60
    
@@ -42,19 +42,22 @@ class MainViewController: UIViewController {
         FeedManager.shared.delegate = self
         feedView.delegate = self
         
+
+        addSegmentControl()
+        textView.configure()
+        tableView = UITableView(frame: CGRect(x: 0, y: segment.frame.maxY, width: view.frame.width, height: view.frame.height - segment.frame.maxY), style: .plain)
+        tableView.backgroundColor = .darkGray
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
-        addSegmentControl()
-        tableView = UITableView(frame: CGRect(x: 0, y: segment.frame.maxY, width: view.frame.width, height: view.frame.height - segment.frame.maxY), style: .plain)
-        
-        
-        textView.configure()
+
         
         FeedManager.shared.configure() { success in
             self.feedView.reloadData(numberOfItems:FeedManager.shared.getMaxIndex(), itemAtIndex: self.getImageView)
         }
+        
         view.addSubview(segment)
+        view.addSubview(tableView)
     }
     
     func addSegmentControl() {
