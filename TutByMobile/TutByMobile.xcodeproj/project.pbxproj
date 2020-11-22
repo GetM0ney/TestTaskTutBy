@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785224BC256A88550047E5DE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785224BB256A88550047E5DE /* TableViewCell.swift */; };
+		785224BF256A8BAC0047E5DE /* MainTableView+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785224BE256A8BAC0047E5DE /* MainTableView+Protocols.swift */; };
 		7887BEA525654F9B009729F7 /* UISegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEA425654F9B009729F7 /* UISegmentControl.swift */; };
 		7887BEA9256557F3009729F7 /* FeedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEA8256557F3009729F7 /* FeedManager.swift */; };
 		7887BEAD2566F23A009729F7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7887BEAC2566F23A009729F7 /* UIImage.swift */; };
@@ -18,7 +20,7 @@
 		78C6E1602567C70C00365FB9 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E15F2567C70C00365FB9 /* Date.swift */; };
 		78C6E1632567C7E300365FB9 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6E1622567C7E300365FB9 /* String.swift */; };
 		78CB134D25631BCE0053E642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB134C25631BCE0053E642 /* AppDelegate.swift */; };
-		78CB135125631BCE0053E642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB135025631BCE0053E642 /* ViewController.swift */; };
+		78CB135125631BCE0053E642 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CB135025631BCE0053E642 /* MainViewController.swift */; };
 		78CB135725631BCE0053E642 /* TutByMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78CB135525631BCE0053E642 /* TutByMobile.xcdatamodeld */; };
 		78CB135925631BD20053E642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78CB135825631BD20053E642 /* Assets.xcassets */; };
 		78CB135C25631BD20053E642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78CB135A25631BD20053E642 /* LaunchScreen.storyboard */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		3F3592288326F769F1415181 /* Pods-TutByMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TutByMobile.release.xcconfig"; path = "Target Support Files/Pods-TutByMobile/Pods-TutByMobile.release.xcconfig"; sourceTree = "<group>"; };
+		785224BB256A88550047E5DE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		785224BE256A8BAC0047E5DE /* MainTableView+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainTableView+Protocols.swift"; sourceTree = "<group>"; };
 		7887BEA425654F9B009729F7 /* UISegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentControl.swift; sourceTree = "<group>"; };
 		7887BEA8256557F3009729F7 /* FeedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedManager.swift; sourceTree = "<group>"; };
 		7887BEAC2566F23A009729F7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -40,7 +44,7 @@
 		78C6E1622567C7E300365FB9 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		78CB134925631BCE0053E642 /* TutByMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TutByMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78CB134C25631BCE0053E642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		78CB135025631BCE0053E642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		78CB135025631BCE0053E642 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		78CB135625631BCE0053E642 /* TutByMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TutByMobile.xcdatamodel; sourceTree = "<group>"; };
 		78CB135825631BD20053E642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78CB135B25631BD20053E642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 				7887BEAC2566F23A009729F7 /* UIImage.swift */,
 				78C6E15F2567C70C00365FB9 /* Date.swift */,
 				78C6E1622567C7E300365FB9 /* String.swift */,
+				785224BE256A8BAC0047E5DE /* MainTableView+Protocols.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -103,7 +108,7 @@
 		78BB12B325642DA60043F863 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				78CB135025631BCE0053E642 /* ViewController.swift */,
+				78CB135025631BCE0053E642 /* MainViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				78BB12D6256528C10043F863 /* FeedView.swift */,
 				7887BEBE25674065009729F7 /* TextView.swift */,
+				785224BB256A88550047E5DE /* TableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785224BF256A8BAC0047E5DE /* MainTableView+Protocols.swift in Sources */,
+				785224BC256A88550047E5DE /* TableViewCell.swift in Sources */,
 				78BB12D7256528C10043F863 /* FeedView.swift in Sources */,
 				7887BEAD2566F23A009729F7 /* UIImage.swift in Sources */,
 				7887BEA9256557F3009729F7 /* FeedManager.swift in Sources */,
@@ -291,7 +299,7 @@
 				7887BEA525654F9B009729F7 /* UISegmentControl.swift in Sources */,
 				78BB12C9256447530043F863 /* AppConstants.swift in Sources */,
 				78BB12C625643D4D0043F863 /* FeedModel.swift in Sources */,
-				78CB135125631BCE0053E642 /* ViewController.swift in Sources */,
+				78CB135125631BCE0053E642 /* MainViewController.swift in Sources */,
 				7887BEBF25674065009729F7 /* TextView.swift in Sources */,
 				78BB12C2256438210043F863 /* CoreDataManager.swift in Sources */,
 				78C6E1602567C70C00365FB9 /* Date.swift in Sources */,

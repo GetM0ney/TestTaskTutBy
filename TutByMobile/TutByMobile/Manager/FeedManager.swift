@@ -35,7 +35,7 @@ class FeedManager: NSObject {
         NSCache<NSString, NSData>()
     }()
     
-    func configure(mode: WatchMode, completion: @escaping (Bool)->()) {
+    func configure(completion: @escaping (Bool)->()) {
         switch mode {
         case .new:
             if feedModelItemsWithInternet.count == 0 {
@@ -80,9 +80,7 @@ class FeedManager: NSObject {
                     print("No saved Items")
                 }
             }
-            
         }
-        
     }
     
     func convert(items: [RSSFeedItem]?) {
@@ -122,7 +120,7 @@ class FeedManager: NSObject {
         
     }
     
-    func getInfo(at index: Int, mode: WatchMode) -> FeedModel {
+    func getInfo(at index: Int) -> FeedModel {
         switch mode {
         case .new:
             if maxIndex - index < 9 {
@@ -151,10 +149,8 @@ class FeedManager: NSObject {
             }
             return feedModelItemsWithInternet[index]
         case .recent:
-            
             return feedModelItemsRecent[index]
         }
-        
     }
     
     func getMaxIndex() -> Int {
