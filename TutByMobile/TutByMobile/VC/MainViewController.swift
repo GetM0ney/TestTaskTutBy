@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
 
         addSegmentControl()
         textView.configure()
-        tableView = UITableView(frame: CGRect(x: 0, y: segment.frame.maxY, width: view.frame.width, height: view.frame.height - segment.frame.maxY), style: .plain)
+        tableView = UITableView(frame: CGRect(x: 0, y: segment.frame.maxY, width: view.frame.width, height: view.frame.height - segment.frame.maxY), style: .grouped)
         tableView.backgroundColor = .darkGray
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,16 +54,18 @@ class MainViewController: UIViewController {
         
         FeedManager.shared.configure() { success in
             self.feedView.reloadData(numberOfItems:FeedManager.shared.getMaxIndex(), itemAtIndex: self.getImageView)
+            self.tableView.reloadData()
         }
         
         view.addSubview(segment)
         view.addSubview(tableView)
+        layout()
+        
     }
     
     func addSegmentControl() {
         let items = ["New", "Recent"]
         segment = UISegmentedControl(items: items)
-        segment.center = CGPoint(x: view.bounds.midX, y: segmentYPos)
         segment.selectedSegmentTintColor = .lightGray
         segment.backgroundColor = .darkGray
         segment.selectedSegmentIndex = 0
@@ -90,5 +92,19 @@ class MainViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func layout() {
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        segment.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            segment.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            segment.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: segment.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
