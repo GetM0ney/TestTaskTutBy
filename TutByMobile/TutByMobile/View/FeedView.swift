@@ -23,7 +23,7 @@ class FeedView: UIView {
     private var itemAtIndex: ((_ bannerView: FeedView, _ index: Int) -> (UIView))!
     private var numberOfItems: Int = 0 {
         didSet {
-            if oldValue != numberOfItems {
+            if oldValue != numberOfItems && (abs(numberOfItems - oldValue) > 1) {
                 delegate?.pageDidChange()
             }
             

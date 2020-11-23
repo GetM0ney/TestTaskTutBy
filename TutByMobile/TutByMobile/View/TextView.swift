@@ -15,6 +15,7 @@ class TextView: UIView {
     private let dateLabel = UILabel(frame: .zero)
     private let linkLabel = UILabel(frame: .zero)
     private var gestureRecognizer = UITapGestureRecognizer()
+    private var linkString: String?
     
     private let leftOffset: CGFloat = 20
     
@@ -98,6 +99,7 @@ class TextView: UIView {
         linkLabel.addGestureRecognizer(gestureRecognizer)
         
         let attributedString = NSMutableAttributedString(string: "Подробнее")
+        linkString = newText.link!
         attributedString.addAttribute(.link, value: newText.link!, range: NSRange(location: 0, length: 9))
         linkLabel.attributedText = attributedString
         
@@ -111,6 +113,6 @@ class TextView: UIView {
     }
     
     @objc func tap() {
-        UIApplication.shared.open(URL(string: FeedManager.shared.getInfo(at: FeedManager.shared.getMaxIndex() - 10).link!)!)
+        UIApplication.shared.open(URL(string: linkString!)!)
     }
 }

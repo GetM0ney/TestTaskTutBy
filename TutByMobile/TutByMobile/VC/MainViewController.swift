@@ -71,8 +71,10 @@ class MainViewController: UIViewController {
         segment.backgroundColor = .darkGray
         segment.selectedSegmentIndex = 0
         segment.addTarget(self, action: #selector(indexChanged), for: .valueChanged)
+        
         let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         segment.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        
         let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
         segment.setTitleTextAttributes(titleTextAttributes1, for: .selected)
         segment.clearBG()
@@ -80,20 +82,23 @@ class MainViewController: UIViewController {
     
     
     @objc func indexChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex{
+        switch sender.selectedSegmentIndex {
         case 0:
-            configure(mode: .new)
-            FeedManager.shared.setMode(mode: .new)
-            
-            
+            FeedManager.shared.setMode(mode: .new) { success in
+                self.feedView.reloadData(numberOfItems:FeedManager.shared.getMaxIndex(), itemAtIndex: self.getImageView)
+                self.tableView.reloadData()
+            }
         case 1:
-            configure(mode: .recent)
-            FeedManager.shared.setMode(mode: .recent)
+            FeedManager.shared.setMode(mode: .recent) { success in
+                self.feedView.reloadData(numberOfItems:FeedManager.shared.getMaxIndex(), itemAtIndex: self.getImageView)
+                self.tableView.reloadData()
+            }
             
         default:
             break
         }
     }
+    
     
     func layout() {
         tableView.translatesAutoresizingMaskIntoConstraints = false

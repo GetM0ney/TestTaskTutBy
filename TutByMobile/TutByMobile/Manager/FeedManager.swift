@@ -74,7 +74,10 @@ class FeedManager: NSObject {
                                                               link: items[i].link,
                                                               date: items[i].date?.toDate(),
                                                               fullDescription: items[i].textDescription))
-                        imageArrayWithoutInternet.append(UIImage(data: imageCache.object(forKey: feedModelItemsWithInternet[i].imageURL!.absoluteString as NSString)! as Data)!)
+                        imageArrayWithoutInternet.append(UIImage(data: imageCache.object(forKey: feedModelItemsWithInternet[i].imageURL!.absoluteString as NSString) as! Data)!)
+                    }
+                    DispatchQueue.main.async {
+                        completion(true)
                     }
                 } else {
                     print("No saved Items")
@@ -153,23 +156,29 @@ class FeedManager: NSObject {
     }
     
     func getMaxIndex() -> Int {
-        return maxIndex + 1
+        switch mode {
+        case .new:
+            return maxIndex + 1
+        case .recent:
+            return feedModelItemsRecent.count
+        }
+        
     }
     
     func setMax(index: Int) {
         maxIndex = index
     }
     
-    func setMaxForRecent() -> Int {
-        return recentNewsMaxIndex
-    }
     
     func getFeedModelItemsCount() -> Int {
         return feedModelItemsWithInternet.count
     }
     
-    func setMode(mode: WatchMode) {
-        self.mode = mode
+    func setMode(mode: WatchMode, completion: @escaping (Bool) -> ()) {
+        if self.mode != mode {
+            self.mode = mode
+            configure(completion: completion)
+        }
     }
     
     func getMode() -> WatchMode {
