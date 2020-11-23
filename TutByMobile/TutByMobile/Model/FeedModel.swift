@@ -12,6 +12,7 @@ struct FeedModel {
     var link: String?
     var date: Date?
     var fullDescription: String?
+
     var textDescription: String? {
         let pattern = #"\>([\w\W]*)\<"#
         let regex = try! NSRegularExpression(pattern: pattern, options: .anchorsMatchLines)
@@ -22,6 +23,7 @@ struct FeedModel {
    
         return (string as NSString).substring(with: match.range(at: 1))
     }
+    
     var imageURL: URL? {
         let pattern = #"\"(.*(jpg|jpeg|png))"#
         let regex = try! NSRegularExpression(pattern: pattern, options: .anchorsMatchLines)

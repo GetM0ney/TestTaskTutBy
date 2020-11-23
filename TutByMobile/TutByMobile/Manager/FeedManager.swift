@@ -27,7 +27,7 @@ class FeedManager: NSObject {
     private var parser = FeedParser(URL: AppConstants.rssURL)
     private var feed: RSSFeed?
     private var maxIndex = 9
-    private var recentNewsCount = 0
+    private var recentNewsMaxIndex = 0
     private var imageArrayWithInternet = [UIImage]()
     private var imageArrayWithoutInternet = [UIImage]()
     
@@ -38,7 +38,7 @@ class FeedManager: NSObject {
     func configure(completion: @escaping (Bool)->()) {
         switch mode {
         case .new:
-            if feedModelItemsWithInternet.count == 0 {
+            if feedModelItemsWithInternet.isEmpty {
                 parser.parseAsync { result in
                     switch result {
                     case .success(let feed):
@@ -67,8 +67,8 @@ class FeedManager: NSObject {
         case .recent:
             let items = manager.fetchRecordsForEntity("News") as? [News]
             if let items = items {
-                if items.count > 0 {
-                    recentNewsCount = items.count
+                if !items.isEmpty {
+                    recentNewsMaxIndex = items.count
                     for i in stride(from: 0, to: items.count, by: +1) {
                         feedModelItemsRecent.append(FeedModel(title: items[i].title,
                                                               link: items[i].link,
@@ -117,7 +117,6 @@ class FeedManager: NSObject {
         case .recent:
             return imageArrayWithoutInternet[index]
         }
-        
     }
     
     func getInfo(at index: Int) -> FeedModel {
@@ -142,7 +141,7 @@ class FeedManager: NSObject {
                 news.textDescription = feedModelItemsWithInternet[index].fullDescription
                 manager.saveContext()
             }
-            if imageCache.object(forKey: feedModelItemsWithInternet[index].imageURL!.absoluteString as NSString) != nil {
+            if imageCache.object(forKey: feedModelItemsWithInternet[index].imageURL!.absoluteString as NSString) == nil {
                 if let data = try? Data(contentsOf: feedModelItemsWithInternet[index].imageURL!) {
                     cachingImage(url: feedModelItemsWithInternet[index].imageURL!.absoluteString, data: data)
                 }
@@ -162,7 +161,7 @@ class FeedManager: NSObject {
     }
     
     func setMaxForRecent() -> Int {
-        return recentNewsCount
+        return recentNewsMaxIndex
     }
     
     func getFeedModelItemsCount() -> Int {

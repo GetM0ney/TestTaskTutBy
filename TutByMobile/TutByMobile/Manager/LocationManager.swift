@@ -36,8 +36,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             }
             if self.placeMark!.isoCountryCode != "BY" {
                 self.delegate?.updateUI(status: true)
+                print("not by")
             }  else {
                 self.delegate?.updateUI(status: false)
+                print("by")
             }
         }
     }

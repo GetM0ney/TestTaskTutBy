@@ -88,38 +88,22 @@ class TextView: UIView {
         dateLabel.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
     }
     
-    func setTitleText(for index: Int) {
-        titleLabel.text = FeedManager.shared.getInfo(at: index).title!
-    }
-    
-    func setDescriptionText(for index: Int) {
-        descriptionLabel.text = FeedManager.shared.getInfo(at: index).textDescription!
-    }
-    
-    func setLink(for index: Int) {
+    func reloadAllText(for index: Int) {
+        let newText = FeedManager.shared.getInfo(at: index)
+        titleLabel.text = newText.title!
+        descriptionLabel.text = newText.textDescription!
+        
         linkLabel.removeGestureRecognizer(gestureRecognizer)
         gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         linkLabel.addGestureRecognizer(gestureRecognizer)
         
         let attributedString = NSMutableAttributedString(string: "Подробнее")
-        attributedString.addAttribute(.link, value: FeedManager.shared.getInfo(at: index).link!, range: NSRange(location: 0, length: 9))
-        
+        attributedString.addAttribute(.link, value: newText.link!, range: NSRange(location: 0, length: 9))
         linkLabel.attributedText = attributedString
-        linkLabel.textColor = .white
-    }
-    
-    func setDateText(for index: Int) {
-    
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-        dateLabel.text = formatter.string(from: FeedManager.shared.getInfo(at: index).date!)
-    }
-    
-    func reloadAllText(for index: Int) {
-        setTitleText(for: index)
-        setDescriptionText(for: index)
-        setLink(for: index)
-        setDateText(for: index)
+        dateLabel.text = formatter.string(from: newText.date!)
     }
     
     required init?(coder: NSCoder) {

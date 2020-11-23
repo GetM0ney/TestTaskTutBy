@@ -84,12 +84,12 @@ class MainViewController: UIViewController {
         case 0:
             configure(mode: .new)
             FeedManager.shared.setMode(mode: .new)
-            feedView.scrollTo(page: 0)
+            
             
         case 1:
             configure(mode: .recent)
             FeedManager.shared.setMode(mode: .recent)
-            feedView.scrollTo(page: 0)
+            
         default:
             break
         }

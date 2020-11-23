@@ -47,7 +47,7 @@ class CoreDataManager {
             // Create Managed Object
             result = NSManagedObject(entity: entityDescription, insertInto: managedObjectContext)
         }
-
+ 
         return result
     }
 
