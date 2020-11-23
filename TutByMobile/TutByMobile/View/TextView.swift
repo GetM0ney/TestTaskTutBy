@@ -49,60 +49,63 @@ class TextView: UIView {
         dateLabel.font = .italicSystemFont(ofSize: 18)
         addSubview(dateLabel)
         
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        linkLabel.translatesAutoresizingMaskIntoConstraints = false
-        dateLabel.translatesAutoresizingMaskIntoConstraints = false
         layout()
     }
     
     func layout() {
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        linkLabel.translatesAutoresizingMaskIntoConstraints = false
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 15),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             
-            linkLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20),
+            linkLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
             linkLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            linkLabel.heightAnchor.constraint(equalToConstant: 21),
             linkLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             
-            dateLabel.topAnchor.constraint(equalTo: linkLabel.bottomAnchor, constant: 20),
+            dateLabel.topAnchor.constraint(equalTo: linkLabel.bottomAnchor, constant: 10),
+            dateLabel.heightAnchor.constraint(equalToConstant: 21),
             dateLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
             dateLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             dateLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
         ])
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        titleLabel.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
+        descriptionLabel.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
+        linkLabel.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
+        dateLabel.setContentHuggingPriority(.fittingSizeLevel, for: .vertical)
+    }
+    
     func setTitleText(for index: Int) {
         titleLabel.text = FeedManager.shared.getInfo(at: index).title!
-        titleLabel.sizeToFit()
-        layoutIfNeeded()
     }
     
     func setDescriptionText(for index: Int) {
-        
         descriptionLabel.text = FeedManager.shared.getInfo(at: index).textDescription!
-        descriptionLabel.sizeToFit()
-        layoutIfNeeded()
     }
     
     func setLink(for index: Int) {
-        
         linkLabel.removeGestureRecognizer(gestureRecognizer)
         gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         linkLabel.addGestureRecognizer(gestureRecognizer)
         
-        let attributedString = NSMutableAttributedString(string: "Подробнее...")
+        let attributedString = NSMutableAttributedString(string: "Подробнее")
         attributedString.addAttribute(.link, value: FeedManager.shared.getInfo(at: index).link!, range: NSRange(location: 0, length: 9))
         
         linkLabel.attributedText = attributedString
         linkLabel.textColor = .white
-        linkLabel.sizeToFit()
-        layoutIfNeeded()
     }
     
     func setDateText(for index: Int) {
@@ -110,8 +113,6 @@ class TextView: UIView {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         dateLabel.text = formatter.string(from: FeedManager.shared.getInfo(at: index).date!)
-        dateLabel.sizeToFit()
-        layoutIfNeeded()
     }
     
     func reloadAllText(for index: Int) {

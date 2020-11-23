@@ -33,6 +33,7 @@ class MainViewController: UIViewController {
     func getImageView(view: FeedView, at index: Int) -> UIView {
         let imageView = UIImageView()
         imageView.image = FeedManager.shared.getImageArrayElement(at: index)
+        tableView.reloadData()
         return imageView
     }
     
