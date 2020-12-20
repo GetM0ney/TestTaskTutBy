@@ -19,11 +19,21 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     private var placemarks = [CLPlacemark]()
     private var placeMark: CLPlacemark?
     
+    
     func configure() {
         locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
         locationManager.requestLocation()
+        
+        var b = 1
+        var c = 1
+        
+        if b == c {
+            print("1")
+        } else {
+            print("2")
+        }
     }
     
     func isCountryBY() {

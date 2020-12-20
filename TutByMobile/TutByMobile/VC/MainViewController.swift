@@ -80,7 +80,6 @@ class MainViewController: UIViewController {
         segment.clearBG()
     }
     
-    
     @objc func indexChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -98,7 +97,6 @@ class MainViewController: UIViewController {
             break
         }
     }
-    
     
     func layout() {
         tableView.translatesAutoresizingMaskIntoConstraints = false

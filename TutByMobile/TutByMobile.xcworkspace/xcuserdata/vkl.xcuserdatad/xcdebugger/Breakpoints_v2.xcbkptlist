@@ -7,70 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "422E61BF-A590-4C96-8D51-E4284039FB1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/Manager/FeedManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "configure(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "21054DA0-8CAB-4FB8-A641-2B76C1992780"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/Manager/FeedManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "getInfo(at:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "ACF43B27-B53E-4DD8-A8FD-43319650FF12"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/Manager/FeedManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "getInfo(at:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F71BDDC-A674-466A-8C1E-A4C303554AF8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/Manager/FeedManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "getMaxIndex()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9105BCB2-BB75-4505-802D-EC7C5618F571"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -78,8 +14,8 @@
             filePath = "TutByMobile/View/FeedView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "reloadScrollView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +30,8 @@
             filePath = "TutByMobile/View/FeedView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "reloadData(numberOfItems:itemAtIndex:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -103,191 +39,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "29729772-8AEC-428C-B05F-C9D4DF2FE5E7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/VC/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "indexChanged(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "29729772-8AEC-428C-B05F-C9D4DF2FE5E7 - b2476f71f725f5ba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool) -&gt; () in TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "29729772-8AEC-428C-B05F-C9D4DF2FE5E7 - 63e118dd646b3c41"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 (TutByMobile.FeedView, Swift.Int) -&gt; __C.UIView in implicit closure #1 (TutByMobile.MainViewController) -&gt; (TutByMobile.FeedView, Swift.Int) -&gt; __C.UIView in closure #1 (Swift.Bool) -&gt; () in TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "200DA602-E7F1-4FAB-87F1-A92FAFB8F0F4"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/VC/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "indexChanged(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "200DA602-E7F1-4FAB-87F1-A92FAFB8F0F4 - e84bcb68e6869f18"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Bool) -&gt; () in TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "200DA602-E7F1-4FAB-87F1-A92FAFB8F0F4 - 63e118dd646b3cfc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #2 (TutByMobile.FeedView, Swift.Int) -&gt; __C.UIView in implicit closure #1 (TutByMobile.MainViewController) -&gt; (TutByMobile.FeedView, Swift.Int) -&gt; __C.UIView in closure #2 (Swift.Bool) -&gt; () in TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AEB334D1-39C0-438B-9416-4BD33A8BA511"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/VC/MainViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "indexChanged(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AEB334D1-39C0-438B-9416-4BD33A8BA511 - 4783ea7fa7af905b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "280">
-               </Location>
-               <Location
-                  uuid = "AEB334D1-39C0-438B-9416-4BD33A8BA511 - e84bcb68e6869f18"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Bool) -&gt; () in TutByMobile.MainViewController.indexChanged(__C.UISegmentedControl) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/VC/MainViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "92EE46B0-6397-4CD9-8DE0-FD66BBD10858"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/View/FeedView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "numberOfItems"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "52904C89-8CAE-49DE-812F-DF68141B4BED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TutByMobile/View/FeedView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "currentPage"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DB36B76B-0FB3-49EA-8658-B63FAB88C5AA"
+            uuid = "F4472F07-4A1E-4B7F-AB04-B89237950ADD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TutByMobile/Manager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "configure(completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -295,79 +55,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "765C317A-6C24-454E-914F-6A27C30D2EA6"
+            uuid = "4DD98525-2473-45D1-8584-5B5AADEBC67F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TutByMobile/Manager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "configure(completion:)"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "setMode(mode:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "765C317A-6C24-454E-914F-6A27C30D2EA6 - eaee6a4d05ec4ccd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;FeedKit.Feed, FeedKit.ParserError&gt;) -&gt; () in TutByMobile.FeedManager.configure(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/Manager/FeedManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "312">
-               </Location>
-               <Location
-                  uuid = "765C317A-6C24-454E-914F-6A27C30D2EA6 - eaee6a4d05ec4ccd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;FeedKit.Feed, FeedKit.ParserError&gt;) -&gt; () in TutByMobile.FeedManager.configure(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/Manager/FeedManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  uuid = "765C317A-6C24-454E-914F-6A27C30D2EA6 - eaee6a4d05ec4ccd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;FeedKit.Feed, FeedKit.ParserError&gt;) -&gt; () in TutByMobile.FeedManager.configure(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "TutByMobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vkl/TestTaskTutBy/TutByMobile/TutByMobile/Manager/FeedManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1380">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FA39D69E-1927-4B72-984F-83265F4CD29B"
+            uuid = "C67A0043-46AC-4E52-AE95-F668B0021756"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TutByMobile/Manager/FeedManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "configure(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1412F337-AA8D-45CB-A698-B6AF90BE9D30"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TutByMobile/Manager/FeedManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "getImageArrayElement(at:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

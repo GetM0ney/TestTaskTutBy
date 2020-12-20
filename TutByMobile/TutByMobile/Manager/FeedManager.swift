@@ -74,7 +74,7 @@ class FeedManager: NSObject {
                                                               link: items[i].link,
                                                               date: items[i].date?.toDate(),
                                                               fullDescription: items[i].textDescription))
-                        imageArrayWithoutInternet.append(UIImage(data: imageCache.object(forKey: feedModelItemsWithInternet[i].imageURL!.absoluteString as NSString) as! Data)!)
+                        imageArrayWithoutInternet.append(UIImage(data: imageCache.object(forKey:  feedModelItemsRecent[i].imageURL!.absoluteString as NSString) as! Data)!)
                     }
                     DispatchQueue.main.async {
                         completion(true)
@@ -93,6 +93,8 @@ class FeedManager: NSObject {
             }
         }
     }
+    
+
     
     func cachingImage(url: String, data: Data) {
         self.imageCache.setObject(NSData(data: data), forKey: url as NSString)
@@ -176,9 +178,18 @@ class FeedManager: NSObject {
     
     func setMode(mode: WatchMode, completion: @escaping (Bool) -> ()) {
         if self.mode != mode {
+            switch mode {
+            case .new:
+                feedModelItemsRecent.removeAll()
+                imageArrayWithoutInternet.removeAll()
+            case .recent:
+                feedModelItemsWithInternet.removeAll()
+                imageArrayWithInternet.removeAll()
+            }
             self.mode = mode
             configure(completion: completion)
         }
+
     }
     
     func getMode() -> WatchMode {

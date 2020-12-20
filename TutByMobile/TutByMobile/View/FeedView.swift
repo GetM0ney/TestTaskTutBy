@@ -26,7 +26,6 @@ class FeedView: UIView {
             if oldValue != numberOfItems && (abs(numberOfItems - oldValue) > 1) {
                 delegate?.pageDidChange()
             }
-            
         }
     }
     
